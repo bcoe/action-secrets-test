@@ -7,8 +7,8 @@ jobs:
     steps:
       - uses: actions/checkout@v2
         with:
-          ref: ${{ github.event.pull_request.head.sha }}
-          repository: ${{ github.event.pull_request.repository.full_name }}
+          ref: my-branch
+          repository: MylesBorins/action-secrets-test
       - uses: actions/setup-node@v1
         with:
           node-version: 13
