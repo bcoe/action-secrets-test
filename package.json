@@ -1,0 +1,19 @@
+{
+  "name": "action-secrets-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"print a secret: $PORK_CHOP\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bcoe/action-secrets-test.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bcoe/action-secrets-test/issues"
+  },
+  "homepage": "https://github.com/bcoe/action-secrets-test#readme"
+}

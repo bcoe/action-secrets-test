@@ -5,12 +5,12 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/github-script@0.3.0
+      - uses: actions/checkout@v1
+      - uses: actions/setup-node@v1
         with:
-          script: |
-            if (!context.payload.issue.pull_request) return;
-            console.info(process.env.PORK_CHOP);
-            console.info(process.env.GITHUB_REPOSITORY);
-            console.info(process.env.GITHUB_SHA);
-          env:
-            PORK_CHOP: ${{ secrets.PORK_CHOP }}
+          node-version: 13
+      - run: npm install
+      - run: npm test
+        env:
+          PORK_CHOP: ${{ secrets.PORK_CHOP }}
+
