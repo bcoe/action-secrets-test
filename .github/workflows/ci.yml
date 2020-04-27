@@ -6,9 +6,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-        with:
-          ref: my-branch
-          repository: MylesBorins/action-secrets-test
+      - run: |
+        git fetch origin +refs/pull/${{ github.event.issue.number }}/merge
+        git checkout FETCH_HEAD
       - uses: actions/setup-node@v1
         with:
           node-version: 13
@@ -16,4 +16,3 @@ jobs:
       - run: npm test
         env:
           PORK_CHOP: ${{ secrets.PORK_CHOP }}
-
