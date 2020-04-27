@@ -6,9 +6,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - run: |
-        git fetch origin +refs/pull/${{ github.event.issue.number }}/merge
-        git checkout FETCH_HEAD
+      - run: git fetch origin +refs/pull/${{ github.event.issue.number }}/merge
+      - run: git checkout FETCH_HEAD
       - uses: actions/setup-node@v1
         with:
           node-version: 13

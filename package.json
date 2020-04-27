@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"print a secret: oh hi\""
+    "test": "echo \"print a secret: oh hi\"",
     "posttest": "echo \"print a secret: $PORK_CHOP\""
   },
   "repository": {
